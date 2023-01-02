@@ -1,2 +1,2 @@
 # just_cardio
-cardio ostagragator for longevity report
+cardio postagragator for longevity report
