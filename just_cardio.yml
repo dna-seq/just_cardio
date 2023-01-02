@@ -1,0 +1,53 @@
+title: Cardio postagregator
+version: 0.1.0
+data_version: 0.1.0
+type: postaggregator
+name: just_cardio
+level: variant
+input_level: variant
+description: Cardio risks postagregator for longevity report.
+requires:
+- dbsnp
+- clinvar
+- omim
+- ncbigene
+- gnomad
+- sift
+- cardioboost
+- vcfinfo
+input_columns:
+- clinvar__sig
+- sift__prediction
+- cardioboost__arrhythmias
+- cardioboost__cardiomyopathy
+- vcfinfo__zygosity
+- base__alt_base
+- base__ref_base
+- dbsnp__rsid
+- base__cchange
+- base__so
+- gnomad__af
+- clinvar__disease_names
+- clinvar__id
+- omim__omim_id
+- ncbigene__ncbi_desc
+
+tags:
+- cardio
+- longevity
+output_columns:
+- name: col1
+  title: clo1
+  type: string
+  width: 1
+  filterable: false
+  hidden: true
+  desc: dummy column
+developer:
+  name: "Alex Karmazin"
+  organization: "Just-DNA_seq"
+  email: "karmazzinalex@gmail.com"
+  website: "https://github.com/dna-seq/opencravat-longevity"
+  citation: ""
+release_note:
+  0.1.0: first version
