@@ -61,7 +61,7 @@ class CravatPostAggregator (BasePostAggregator):
         isOk:bool = False
 
         significance:str = input_data['clinvar__sig']
-        if significance not in self.significance_filter:
+        if significance in self.significance_filter:
             isOk = True
 
         sift_prediction:str = input_data['sift__prediction']
@@ -109,4 +109,3 @@ class CravatPostAggregator (BasePostAggregator):
                 input_data['ncbigene__ncbi_desc'])
 
         self.longevity_cursor.execute(sql, task)
-        return {"col1":""}
